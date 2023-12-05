@@ -15,12 +15,12 @@ sap.ui.define([
                 var heading = this.getView().byId("HeadOptions")
                 heading.addStyleClass("HeadOptions")
 
-                // var alloptions = this.getView().byId("alloptions") //for more dropdown
-                // alloptions.addStyleClass("alloptions")
+                
             },
             CreateVoyage:function(){
                 const oRouter = this.getOwnerComponent().getRouter();
                 oRouter.navTo("TrCreateVoyage")    
-            }
+            },
+            
         });
     });
