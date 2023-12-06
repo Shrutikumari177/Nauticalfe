@@ -399,7 +399,7 @@ xmlns:form="sap.ui.layout.form"
 
  <!-- Bid Details section -->
 
-	      <HBox id="p3"  >
+	<HBox id="p3"  >
 		<HBox id="HBox1" class="table_box">
         <Table width="500px" items="{Vdata>/TechnicalBidding}" id="vesselRefDetails1" mode="SingleSelectLeft" headerText="Technical Bidding Details">
             <columns>
@@ -468,7 +468,7 @@ xmlns:form="sap.ui.layout.form"
             <Button id="_IDGenBuon14" icon="sap-icon://sys-minus"></Button>
         </HBox>
 
-		</HBox>
+	</HBox>
 
             <!-- long text  -->
 			<HBox id="p4" >
