@@ -280,13 +280,7 @@
 /* .sapMFlexItemAlignAuto {
     align-self: center;
 } */
-.navContainerControl {
-	border-color: #888 !important;
-	border-style: solid !important;
-	border-width: 0.0625em !important;
-    min-width: 100% !important;
-     width: 200% !important; 
-}
+
 
 /* for voyage option page */
 
@@ -299,11 +293,8 @@
     margin-top: 8%;
 }
 
-/*for Createvoyage plan */
-.sapMNav navContainerControl sapUiSmallMarginBottom
-{
-    min-width: 100%;
-}
+/*for Createvoyage plan section*/
+
 .animation{
     display: none;
 }
@@ -311,50 +302,7 @@
     line-height: 1.500rem;
     color: red;
 }
-#application-nauticalfe-display-component---TrCreateVoyagePlan--Select1-labelText{
-    line-height: 1.500rem;
-    color: rgb(186, 46, 46);   
-}
-.abc{
-    margin-left: 17%;
-    margin-top: -60px;
-}
-.headersec{
-    display: flex;
-    justify-content: space-between;
-    padding-left: 2%;
-}
-/* for createvoyageplan page */
-.vhead{
-    margin-top: 5%;
-}
-.Hhead{
-    margin-top: 3%;
-}
 
-
-
-/* for Createvoyageplan  vessel plan table  */
-
-
-.inner_tabel{
-   max-width: 100vw !important;
-   
-}
-.table_container{
-    max-width: 100vw !important;
-    
-}
-.infoinputs{
-    margin: 0 20px;
-}
- 
-heading{
-    margin-top: 80px;
-    margin-left: 20px;
-    font-size: 15px;
-    
-}
 
 
 /* bid detail section */
@@ -374,43 +322,10 @@ font-size: small;
 
 /* FOR LONG TEXT */
 
-.sapMInputBase.sapMTextArea .sapMTextAreaInner {
+/* .sapMInputBase.sapMTextArea .sapMTextAreaInner {
     line-height: 10;
     background-color: white;
-}
-
-/* Footer part of create voyage plan page */
-.footerpagebuttons{
-    margin-bottom: 2%;
-    height: 5px;
-    margin-left: 20px;
-}
-.footercostplanbutton{
-    margin-left: 30px;
-    margin-top: 10px;
-}
-
-.footeractualplanbutton{
-    margin-left: 20px;
-    margin-top: 10px;
-}
-
-.costplantables{
-    margin-left: 20px;
-    margin-top: 20px;
-}
-
-.footerheading{
-    margin-top: 60px;
-    margin-left: 20px;
-    font-size: 15px;
-    font-weight: bold;
-}
-
-
-
-
-
+} */
 
 
 
@@ -461,4 +376,8 @@ font-size: small;
 }
 .vesselRefDetails{
     border: 1px solid grey;
+}
+/* long text voyage change */
+.longtxt{
+    border: 1px solid gray !important;
 }
