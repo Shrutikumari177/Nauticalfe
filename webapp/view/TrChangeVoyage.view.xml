@@ -300,66 +300,66 @@
                         </HBox>
                         
                         <Table id="_IDGenTable1"  >
-                            <columns>
+                            <columns  >
                                 
                                 <Column id="_IDColumn6" >
-                                    <Label id="_IDGebel15" text="LegID" textAlign="Begin"></Label>
+                                    <Label id="_IDGebel15" text="LegID" ></Label>
                                 </Column>
                                 <Column id="_IDGenlumn6" >
-                                    <Label id="_IDGLabel15" text="PortCost" textAlign="Begin"></Label>
+                                    <Label id="_IDGLabel15" text="PortCost" ></Label>
                                 </Column>
                                 <Column id="_IDGenColumn7"  >
-                                    <Label id="_IDGenLabel16" text="Events" textAlign="Begin"></Label>
+                                    <Label id="_IDGenLabel16" text="Events" ></Label>
                                 </Column>
 
                                 <Column id="_IDGenColumn6" >
-                                    <Label id="_IDGenLabel15" text="Port name" textAlign="Begin"></Label>
+                                    <Label id="_IDGenLabel15" text="Port name" ></Label>
                                 </Column>
                                 
                                 <Column id="_IDGenColumn8"  >
-                                    <Label id="_IDGenLabel17" text="Other Cost" textAlign="Begin"></Label>
+                                    <Label id="_IDGenLabel17" text="Other Cost" ></Label>
                                 </Column>
                                 <Column id="_IDGenColumn9"  >
-                                    <Label id="_IDGenLabel18" text="Frieght Cost" textAlign="Begin"></Label>
+                                    <Label id="_IDGenLabel18" text="Frieght Cost" ></Label>
                                 </Column>
                                 <Column id="_IDGenColumn10"  >
-                                    <Label id="_IDGenLabel19" text="Total Cost" textAlign="Begin"></Label>
+                                    <Label id="_IDGenLabel19" text="Total Cost" ></Label>
                                 </Column>
                                 <Column id="_IDGenColumn11"  >
-                                    <Label id="_IDGenLabel20" text="Cargo Size" textAlign="Begin"></Label>
+                                    <Label id="_IDGenLabel20" text="Cargo Size" ></Label>
                                 </Column>
                                 <Column id="_IDGenColumn12">
-                                    <Label id="_IDGenLabel21" text="Unit" textAlign="Begin"></Label>
+                                    <Label id="_IDGenLabel21" text="Unit" ></Label>
                                 </Column>
                                 <Column id="_IDGenColumn13" >
-                                    <Label id="_IDGenLabel22" text="Distance" textAlign="Begin"></Label>
+                                    <Label id="_IDGenLabel22" text="Distance" ></Label>
                                 </Column>
                                 <Column id="_IDGenColumn14" >
-                                    <Label id="_IDGenLabel23" text="UOM" textAlign="Begin"></Label>
+                                    <Label id="_IDGenLabel23" text="UOM" ></Label>
                                 </Column>
                                 <Column id="_IDGenColumn15" >
-                                    <Label id="_IDGenLabel24" text="Port Days" textAlign="Begin"></Label>
+                                    <Label id="_IDGenLabel24" text="Port Days" ></Label>
                                 </Column>
                                 <Column id="_IDGenColumn16" >
-                                    <Label id="_IDGenLabel25" text="Weather" textAlign="Begin"></Label>
+                                    <Label id="_IDGenLabel25" text="Weather" ></Label>
                                 </Column>
                                 <Column id="_IDGenColumn17"  >
-                                    <Label id="_IDGenLabel26" text="Sea Days" textAlign="Begin"></Label>
+                                    <Label id="_IDGenLabel26" text="Sea Days" ></Label>
                                 </Column>
                                 <Column id="_IDGenColumn18"  >
-                                    <Label id="_IDGenLabel27" text="ETA" textAlign="Begin"></Label>
+                                    <Label id="_IDGenLabel27" text="ETA" ></Label>
                                 </Column>
                                 <Column id="_IDGenColn18"  >
-                                    <Label id="_IDGenLel27" text="Time" textAlign="Begin"></Label>
+                                    <Label id="_IDGenLel27" text="Time" ></Label>
                                 </Column>
                                 <Column id="_IDln18"  >
-                                    <Label id="_nLel27" text="ETD" textAlign="Begin"></Label>
+                                    <Label id="_nLel27" text="ETD" ></Label>
                                 </Column>
                                 <Column id="GenColn18"  >
-                                    <Label id="GenLel27" text="Time" textAlign="Begin"></Label>
+                                    <Label id="GenLel27" text="Time" ></Label>
                                 </Column>
                                 <Column id="_oln18"  >
-                                    <Label id="_Iel27" text="Status" textAlign="Begin"></Label>
+                                    <Label id="_Iel27" text="Status" ></Label>
                                 </Column>
                             </columns>
                             <items>
