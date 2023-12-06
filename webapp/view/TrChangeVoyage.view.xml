@@ -4,6 +4,7 @@
     xmlns:form="sap.ui.layout.form"
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
     xmlns="sap.m">
+    
    <Bar id="navbar">
       <contentLeft>
         <Button id="Button1" text="Execute"  />
@@ -233,7 +234,7 @@
 	         </Panel>
 
         <!-- end of vessel detail section -->
-        <HBox id="p2" class="table_container">
+        <Panel id="p2" class="table_container">
                  <Text id="_IDGenText3" text="Plan Info Details" class="heading"/>
             <HBox id="_IDHBox11" class="planOperations">
             <FlexBox id="_IDGenFlexBox1" alignContent="Stretch" >
@@ -409,8 +410,39 @@
             </items>
          </Table>
 
-			</HBox>
+			</Panel>
+ </NavContainer>
+ <!-- header detail ends here -->
 
-   </NavContainer>
+ <!-- item details start from here  -->
+<Button id="Hide1" icon="sap-icon://minimize"></Button>
+<Text id="header2" text="Item Details"></Text>
+    <Bar id="HBox20">
+    <contentLeft>
+        <Button id="ButtonA" text="ButtonA" press="handleNavToPanelA" />
+        <Button id="ButtonB" text="ButtonB" press="handleNavToPanelB" />
+    </contentLeft>
+   </Bar>
+   <NavContainer
+    id="navCon2"
+    navigationFinished="onNavigationFinished"
+    width="100px"
+    height="30em"
+    class="navContainerControl sapUiSmallMarginBottom">
+
+    <!-- Panel for ButtonA -->
+    <Panel id="panelA" height="600px" class="navigationPanel">
+         <Text text="this is page A"></Text>
+        <!-- ... -->
+    </Panel>
+
+    <!-- Panel for ButtonB -->
+    <Panel id="panelB" height="600px" class="navigationPanel">
+        <Text text="this is page B"></Text>
+        <!-- ... -->
+    </Panel>
+
+</NavContainer>
+
 
 </mvc:View>
