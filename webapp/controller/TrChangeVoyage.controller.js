@@ -2,7 +2,7 @@ sap.ui.define(
     [
         "sap/ui/core/mvc/Controller"
     ],
-    function(BaseController) {
+    function( BaseController) {
       "use strict";
   
       return BaseController.extend("nauticalfe.controller.TrChangeVoyage", {
@@ -28,6 +28,7 @@ sap.ui.define(
               navCon.back();
           }
       },
+      //  for navigation of nav container 2 
         handleNavToPanelA: function() {
         this.navigateToPanel("panelA");
        },
@@ -36,11 +37,13 @@ sap.ui.define(
         this.navigateToPanel("panelB");
       },
 
-    navigateToPanel: function(panelId) {
-        var navCon = this.byId("navCon2");
-        navCon.to(this.byId(panelId));
-    },
-
+      navigateToPanel: function(panelId) {
+          var navCon = this.byId("navCon2");
+          navCon.to(this.byId(panelId));
+      }, 
+        
+        
+         // for visiblity of nav container 1
           toggleNavContainer: function() {
             var navCon = this.byId("navCon");
             var bar = this.byId("HBox10");
@@ -53,6 +56,7 @@ sap.ui.define(
             
 
           },
+          // for visiblity of nav container 2
           toggleBarAndNavContainer: function() {
             var navCon2 = this.byId("navCon2");
             var bar2 = this.byId("HBox20");
@@ -60,7 +64,56 @@ sap.ui.define(
 
             navCon2.setVisible(!currentVisibility);
             bar2.setVisible(!currentVisibility);
+        },
+        // Event handler for adding a row
+        onAddRow: function() {
+          var oTable = this.getView().byId("vesselRefDetails1");
+          var oModel = oTable.getModel("Vdata");
+          var oData = oModel.getProperty("/TechnicalBidding");
+
+          // Create a new row with default values for properties
+          var newEntry = {
+              Heads: "",
+
+              
+          };
+
+          // Add the new row to your data array
+          oData.push(newEntry);
+          // oModel.push(newEntry);
+
+          // Set the updated data to the model
+          oModel.setProperty("/TechnicalBidding", oData);
+      },
+      onDeleteRow: function() {
+        var oTable = this.getView().byId("vesselRefDetails1");
+        var oModel = oTable.getModel("Vdata");
+        var aSelectedItems = oTable.getSelectedItems();
+    
+        if (aSelectedItems.length > 0) {
+            var aData = oModel.getProperty("/TechnicalBidding"); // Assuming "/TechnicalBidding" is the path to your array data
+    
+            aSelectedItems.forEach(function(oItem) {
+                var oContext = oItem.getBindingContext("Vdata");
+                var sPath = oContext.getPath();
+                var iIndex = parseInt(sPath.split("/").pop()); // Extract the index from the path
+    
+                aData.splice(iIndex, 1); // Remove the item from the array
+            });
+    
+            oModel.setProperty("/TechnicalBidding", aData); // Set the updated array back to the model
+    
+            oTable.removeSelections(); // Clear the selection after deletion
+        } else {
+            // Alert when no row is selected
+            alert("Please select a row to delete");
         }
+    }
+    
+    
+    
+    
+        
       });
     }
   );

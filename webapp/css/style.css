@@ -380,4 +380,8 @@ font-size: small;
 /* long text voyage change */
 .longtxt{
     border: 1px solid gray !important;
+    
+}
+.sapMInputBase.sapMTextArea .sapMTextAreaInner {
+    line-height: 10;
 }

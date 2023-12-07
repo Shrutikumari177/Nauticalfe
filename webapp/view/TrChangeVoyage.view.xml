@@ -1,7 +1,7 @@
 <mvc:View controllerName="nauticalfe.controller.TrChangeVoyage"
     xmlns:html="http://www.w3.org/1999/xhtml"
     xmlns:semantic="sap.m.semantic" xmlns:core="sap.ui.core" xmlns:tnt="sap.tnt" xmlns:cards="sap.f.cards" 
-    xmlns:form="sap.ui.layout.form"
+    xmlns:form="sap.ui.layout.form" xmlns:ui="sap.ui.table" xmlns:u="sap.ui.unified" xmlns:c="sap.ui.core"
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
     xmlns="sap.m">
     
@@ -191,7 +191,7 @@
 
             
             <!-- start of vessel detail section -->
-            <Panel id="p1" height="600px" class="navigationPanel">
+            <Panel id="p1" height="400px" class="navigationPanel">
                 <Text id="_IDGenText12" text="Enter Details" class="vdheading"/>
                         <FlexBox id="vdsection1" class="vdsection" alignContent="Center">
                             <Label id="_IDGenLabel1" text="Vessel Name:"></Label>
@@ -271,7 +271,7 @@
                         <FlexBox id="_IDGenFlexBox1" alignContent="Stretch" >
                         <Button id="_IDGenButton10" icon="sap-icon://sys-minus"/>
                         <FlexBox id="_IDGenFlexBox2" alignContent="Stretch" class="infoinputs">
-                        <Label id="_IDGenLabel7" text="Actual Speed:" required="true"/>
+                        <Label id="_IDGenLabel7" text="Plan Speed:" required="true"/>
                         <Input id="_IDGenInput4" width="70px" class="inputfields"></Input>
                         <Label id="_IDGenLabel8" text="NM/Hour"/>
                         </FlexBox>
@@ -305,8 +305,8 @@
                                 <Column id="_IDColumn6" >
                                     <Label id="_IDGebel15" text="LegID" ></Label>
                                 </Column>
-                                <Column id="_IDGenlumn6" >
-                                    <Label id="_IDGLabel15" text="PortCost" ></Label>
+                                <Column id="_IDGenlumn6" width="90px" >
+                                    <Label id="_IDGLabel15" text="Port Cost" wrappingType="Hyphenated" wrapping="true" ></Label>
                                 </Column>
                                 <Column id="_IDGenColumn7"  >
                                     <Label id="_IDGenLabel16" text="Events" ></Label>
@@ -332,7 +332,7 @@
                                     <Label id="_IDGenLabel21" text="Unit" ></Label>
                                 </Column>
                                 <Column id="_IDGenColumn13" >
-                                    <Label id="_IDGenLabel22" text="Distance" ></Label>
+                                    <Label id="_IDGenLabel22" text="Distance"  ></Label>
                                 </Column>
                                 <Column id="_IDGenColumn14" >
                                     <Label id="_IDGenLabel23" text="UOM" ></Label>
@@ -439,7 +439,7 @@
                             <Label id="_IDGabel44" text="UOM" textAlign="Begin"></Label>
                         </Column>
                         <Column id="_IDGenColumn29">
-                            <Label id="_IDGabel45" text="Port Days" textAlign="Begin"></Label>
+                            <Label id="_IDGabel45" text="Port Days" textAlign="Begin" ></Label>
                         </Column>
                         <Column id="_IDGenColumn30" >
                             <Label id="_IDGebel46" text="Weather" textAlign="Begin"></Label>
@@ -482,8 +482,9 @@
                             <ColumnListItem id="_IDGenColumnListItem2">
                                 <cells>
                                     
-                                <Text id="_IDGenText10" text="{Vdata>Heads}" ></Text>
-                                    <CheckBox id="checkbox1"></CheckBox>
+                                <Input id="in1" value="{Vdata>Heads}" ></Input>
+                                <CheckBox id="checkbox1" select="onCheckBoxSelect"></CheckBox>
+                                <Input id="in2" value="" />
                                 </cells>
                             </ColumnListItem>  
                         </items>
@@ -515,8 +516,8 @@
                 </HBox>
         
                 <HBox id="HBox2" class="techbutton">
-                    <Button id="Button11" icon="sap-icon://sys-add"></Button>
-                    <Button id="_IDGenBuon12" icon="sap-icon://sys-minus"></Button>
+                    <Button id="add" icon="sap-icon://sys-add" press=".onAddRow"></Button>
+                    <Button id="minus" icon="sap-icon://sys-minus" press=".onDeleteRow"></Button>
                 </HBox>
                 <HBox id="HBox3" class="techdropdown">
                     <Label id="_IDGenLabel49" text="Select Profile:"/>
@@ -527,8 +528,8 @@
                     </Select>
                 </HBox>
             
-                <HBox id="HBox4" class="commercialbutton">
-                    <Button id="_IDGenBuon13" icon="sap-icon://sys-add"></Button>
+                <HBox id="HBox4" class="commercialbutton" >
+                    <Button id="_IDGenBuon13" icon="sap-icon://sys-add" ></Button>
                     <Button id="_IDGenBuon14" icon="sap-icon://sys-minus"></Button>
                 </HBox>
 
@@ -537,8 +538,14 @@
             <Panel id="p4" >
 				     
                     <Label text="Long Text"></Label>
-                    <TextArea id="TextArea1" value=""  class="longtxt"> </TextArea>
-              
+                    <TextArea id="TextArea1" value=""  class="longtxt" width="100%" > </TextArea>   
+                                 
+			</Panel>
+             <Panel id="p5" >
+				     
+                    <Label text="Long Text"></Label>
+                    <TextArea id="Textea1" value=""  class="longtxt" width="100%" > </TextArea>
+                                 
 			</Panel>
 
         </NavContainer>
@@ -670,7 +677,7 @@
 
             <!-- Panel for ButtonB -->
             <Panel id="panelB" height="600px" class="navigationPanel">
-                <Text text="this is page B"></Text>
+                <Text id="_IDGenText22" text="this is page B"></Text>
                 <!-- ... -->
             </Panel>
 
