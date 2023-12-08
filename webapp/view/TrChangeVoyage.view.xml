@@ -2,7 +2,8 @@
     xmlns:html="http://www.w3.org/1999/xhtml"
     xmlns:semantic="sap.m.semantic" xmlns:core="sap.ui.core" xmlns:tnt="sap.tnt" xmlns:cards="sap.f.cards" 
     xmlns:form="sap.ui.layout.form" xmlns:ui="sap.ui.table" xmlns:u="sap.ui.unified" xmlns:c="sap.ui.core"
-    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns:l="sap.ui.layout"
+      
     xmlns="sap.m">
     
     
@@ -543,8 +544,17 @@
 			</Panel>
              <Panel id="p5" >
 				     
-                    <Label text="Long Text"></Label>
-                    <TextArea id="Textea1" value=""  class="longtxt" width="100%" > </TextArea>
+                    <l:VerticalLayout id="_IDGenVerticalLayout1">
+                  <u:FileUploader
+                    id="fileUploader"
+                    name="myFileUpload"
+                    uploadUrl="upload/"
+                    tooltip="Upload your file to the local server"
+                    uploadComplete="handleUploadComplete"
+                    buttonText="Choose File"
+                    icon="sap-icon://value-help"/>
+                  
+                </l:VerticalLayout>
                                  
 			</Panel>
 
