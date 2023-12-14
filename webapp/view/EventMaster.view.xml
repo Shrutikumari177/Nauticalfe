@@ -101,6 +101,8 @@
             </ColumnListItem>
         </Table>
 
+        <Bar >
+        <contentRight>
         <VBox id="toHide">
             <HBox id="_IDGenHBox1">
                 <Button id="_IDGenButton11" text="Save" />
@@ -110,5 +112,8 @@
                 />
             </HBox>
         </VBox>
+        </contentRight>
+        </Bar>
+        
     </Page>
 </mvc:View>

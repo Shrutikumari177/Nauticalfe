@@ -289,6 +289,13 @@
                 "target": [
                     "TargetPortMaster"
                 ]
+            },
+            {
+                "name": "RouteRefDocIndicator",
+                "pattern": "RefDocIndicator",
+                "target": [
+                    "TargetRefDocIndicator"
+                ]
             }
             ],
             "targets": {
@@ -410,7 +417,15 @@
                 "clearControlAggregation": false,
                 "viewId": "PortMaster",
                 "viewName":"PortMaster"
+            },
+            "TargetRefDocIndicator": {
+                "viewType": "XML",
+                "transition": "slide",
+                "clearControlAggregation": false,
+                "viewId": "RefDocIndicator",
+                "viewName":"RefDocIndicator"
             }
+
 
               
                 

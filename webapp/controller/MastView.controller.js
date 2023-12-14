@@ -27,6 +27,10 @@ sap.ui.define(
         onPortMaster:function(){
           const oRouter = this.getOwnerComponent().getRouter();
                 oRouter.navTo("RoutePortMaster");
+        },
+        onRefDocIndicator:function(){
+          const oRouter = this.getOwnerComponent().getRouter();
+                oRouter.navTo("RouteRefDocIndicator");
         }
         
       });    }
