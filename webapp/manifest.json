@@ -104,7 +104,7 @@
                 "type": "sap.ui.model.json.JSONModel",
                 "uri": "Voyage.json"
             },
-            "": {
+            "MARINE_TRAFFIC_API_SRV": {
                 "preload": true,
                 "dataSource": "MARINE_TRAFFIC_API_SRV",
                 "settings": {
@@ -268,7 +268,28 @@
                   "target": [
                       "TargetCostMaster"
                   ]
-              }
+              },
+              {
+                "name": "RouteEventMaster",
+                "pattern": "EventMaster",
+                "target": [
+                    "TargetEventMaster"
+                ]
+            },
+            {
+                "name": "RoutePortLocUpload",
+                "pattern": "PortLocUpload",
+                "target": [
+                    "TargetPortLocUpload"
+                ]
+            },
+            {
+                "name": "RoutePortMaster",
+                "pattern": "PortMaster",
+                "target": [
+                    "TargetPortMaster"
+                ]
+            }
             ],
             "targets": {
                 "TargetView1": {
@@ -368,7 +389,30 @@
                   "clearControlAggregation": false,
                   "viewId": "CostMaster",
                   "viewName": "CostMaster"
-              }
+              },
+              "TargetEventMaster": {
+                "viewType": "XML",
+                "transition": "slide",
+                "clearControlAggregation": false,
+                "viewId": "EventMaster",
+                "viewName":"EventMaster"
+            },
+            "TargetPortLocUpload": {
+                "viewType": "XML",
+                "transition": "slide",
+                "clearControlAggregation": false,
+                "viewId": "PortLocUpload",
+                "viewName":"PortLocUpload"
+            },
+            "TargetPortMaster": {
+                "viewType": "XML",
+                "transition": "slide",
+                "clearControlAggregation": false,
+                "viewId": "PortMaster",
+                "viewName":"PortMaster"
+            }
+
+              
                 
             }
         },

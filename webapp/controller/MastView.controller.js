@@ -15,7 +15,20 @@ sap.ui.define(
         onCostMaster:function(){
           const oRouter = this.getOwnerComponent().getRouter();
                 oRouter.navTo("RouteCostMaster");
+        },
+        onEventMaster:function(){
+          const oRouter = this.getOwnerComponent().getRouter();
+                oRouter.navTo("RouteEventMaster");
+        },
+        onPortLocUpload:function(){
+          const oRouter = this.getOwnerComponent().getRouter();
+                oRouter.navTo("RoutePortLocUpload");
+        },
+        onPortMaster:function(){
+          const oRouter = this.getOwnerComponent().getRouter();
+                oRouter.navTo("RoutePortMaster");
         }
+        
       });    }
   );
   

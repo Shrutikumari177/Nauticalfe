@@ -1,12 +1,8 @@
-<mvc:View
-    controllerName="nauticalfe.controller.PortLocMaster"
+<mvc:View controllerName="nauticalfe.controller.PortMaster"
     xmlns:html="http://www.w3.org/1999/xhtml"
-    xmlns:mvc="sap.ui.core.mvc"
-    displayBlock="true"
-    xmlns="sap.m"
-    xmlns:core="sap.ui.core"
-
->
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m" 
+    xmlns:core="sap.ui.core">
     <Page id="page">
         <headerContent>
             <!-- Your header content goes here -->
@@ -118,7 +114,8 @@
                 />
             </contentRight>
         </Bar>
-        <Text text="Port Master" class="masterheadings"></Text>
+        <Text text="Port Code  Master" class="masterheadings"></Text>
+
         <Table
             width="100%"
             class="mastertables"
@@ -128,47 +125,32 @@
             mode="MultiSelect"
         >
             <columns>
+                <Column id="_IDGenColumn3">
+                    <Label id="_IDGenLabel3" text="Value" />
+                </Column>
+                <Column id="_IDGenColumn4">
+                    <Label id="_IDGenLabel4" text="Field Description" />
+                </Column>
                 
                 <Column id="_IDGenColumn2">
                     <Label id="_IDGenLabel2" text="Country" />
                 </Column>
-                <Column id="_IDGenColumn3">
-                    <Label id="_IDGenLabel3" text="Port Code" />
-                </Column>
-                <Column id="_IDGenColumn4">
-                    <Label id="_IDGenLabel4" text="Port Name" />
-                </Column>
-                <Column id="_IDGenColumn5">
-                    <Label id="_IDGenLabel5" text="Relatedanchorage" />
-                </Column>
-                <Column id="_IDGenColumn6">
-                    <Label id="_IDGenLabel6" text="Latitude" />
-                </Column>
-                <Column id="_IDGenColumn7">
-                    <Label id="_IDGenLabel7" text="Longitude" />
-                </Column>
                 <Column id="_IDGenColumn8">
                     <Label id="_IDGenLabel8" text="Country Name" />
                 </Column>
-                <Column id="_IDGenColumn9">
-                    <Label id="_IDGenLabel9" text="Location Id" />
-                </Column>
-                <Column id="_IDGenColumn10">
-                    <Label id="_IDGenLabel10" text="Proc Ind" />
-                </Column>
+                
             </columns>
             <ColumnListItem id="_IDGenColumnListItem1">
                 <cells>
                     
-                    <Text id="_IDGenText2" text="{MARINE_TRAFFIC_API_SRV>Country}" />
-                    <Text id="_IDGenText3" text="{MARINE_TRAFFIC_API_SRV>Portc}" />
-                    <Text id="_IDGenText4" text="{MARINE_TRAFFIC_API_SRV>Portn}" />
-                    <Text id="_IDGenText5" text="{MARINE_TRAFFIC_API_SRV>Reancho}" />
-                    <Text id="_IDGenText6" text="{MARINE_TRAFFIC_API_SRV>Latitude}" />
-                    <Text id="_IDGenText7" text="{MARINE_TRAFFIC_API_SRV>Longitude}" />
-                    <Text id="_IDGenText8" text="{MARINE_TRAFFIC_API_SRV>Countryn}" />
-                    <Text id="_IDGenText9" text="{MARINE_TRAFFIC_API_SRV>Locid}" />
-                    <Text id="_IDGenText10" text="{}" />
+                    <Text id="_IDGenText2" text="{MARINE_TRAFFIC_API_SRV>Portc}" />
+                    
+                    <Text id="_IDGenText8" text="{MARINE_TRAFFIC_API_SRV>Portn}" />
+                     <Text id="_IDGenText9" text="{MARINE_TRAFFIC_API_SRV>Country}" />
+                    <Text id="_IDGenText10" text="{MARINE_TRAFFIC_API_SRV>Countryn}" />
+                   
+                    
+                    
                 </cells>
             </ColumnListItem>
         </Table>
@@ -237,4 +219,6 @@
             </HBox>
         </VBox>
     </Page>
+
+    
 </mvc:View>
