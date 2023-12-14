@@ -1,270 +1,382 @@
 {
-  "_version": "1.58.0",
-  "sap.app": {
-    "id": "nauticalfe",
-    "type": "application",
-    "i18n": "i18n/i18n.properties",
-    "applicationVersion": {
-      "version": "0.0.1"
+    "_version": "1.58.0",
+    "sap.app": {
+        "id": "nauticalfe",
+        "type": "application",
+        "i18n": "i18n/i18n.properties",
+        "applicationVersion": {
+            "version": "0.0.1"
+        },
+        "title": "{{appTitle}}",
+        "description": "{{appDescription}}",
+        "resources": "resources.json",
+        "sourceTemplate": {
+            "id": "@sap/generator-fiori:basic",
+            "version": "1.11.2",
+            "toolsId": "6a08fa2c-0d03-477f-9111-7fdb32101157"
+        },
+        "dataSources": {
+            "MARINE_TRAFFIC_API_SRV": {
+                "uri": "/sap/opu/odata/nauti/MARINE_TRAFFIC_API_SRV",
+                "type": "OData",
+                "settings": {
+                    "annotations": [],
+                    "localUri": "localService/MARINE_TRAFFIC_API_SRV/metadata.xml",
+                    "odataVersion": "2.0"
+                }
+            },
+            "NAUTICALCV_SRV": {
+                "uri": "/sap/opu/odata/nauti/NAUTICALCV_SRV",
+                "type": "OData",
+                "settings": {
+                    "annotations": [],
+                    "localUri": "localService/NAUTICALCV_SRV/metadata.xml",
+                    "odataVersion": "2.0"
+                }
+            },
+            "CONTROLLER_SRV": {
+                "uri": "/sap/opu/odata/nauti/CONTROLLER_SRV",
+                "type": "OData",
+                "settings": {
+                    "annotations": [],
+                    "localUri": "localService/CONTROLLER_SRV/metadata.xml",
+                    "odataVersion": "2.0"
+                }
+            },
+            "VENDOR_SRV": {
+                "uri": "/sap/opu/odata/nauti/VENDOR_SRV",
+                "type": "OData",
+                "settings": {
+                    "annotations": [],
+                    "localUri": "localService/VENDOR_SRV/metadata.xml",
+                    "odataVersion": "2.0"
+                }
+            }
+        }
     },
-    "title": "{{appTitle}}",
-    "description": "{{appDescription}}",
-    "resources": "resources.json",
-    "sourceTemplate": {
-      "id": "@sap/generator-fiori:basic",
-      "version": "1.11.2",
-      "toolsId": "6a08fa2c-0d03-477f-9111-7fdb32101157"
+    "sap.ui": {
+        "technology": "UI5",
+        "icons": {
+            "icon": "",
+            "favIcon": "",
+            "phone": "",
+            "phone@2": "",
+            "tablet": "",
+            "tablet@2": ""
+        },
+        "deviceTypes": {
+            "desktop": true,
+            "tablet": true,
+            "phone": true
+        }
+    },
+    "sap.ui5": {
+        "flexEnabled": true,
+        "dependencies": {
+            "minUI5Version": "1.119.2",
+            "libs": {
+                "sap.m": {},
+                "sap.ui.core": {},
+                "sap.f": {},
+                "sap.suite.ui.generic.template": {},
+                "sap.ui.comp": {},
+                "sap.ui.generic.app": {},
+                "sap.ui.table": {},
+                "sap.ushell": {}
+            }
+        },
+        "contentDensities": {
+            "compact": true,
+            "cozy": true
+        },
+        "models": {
+            "i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "settings": {
+                    "bundleName": "nauticalfe.i18n.i18n"
+                }
+            },
+            "bidData": {
+                "type": "sap.ui.model.json.JSONModel",
+                "uri": "Bid.json"
+            },
+            "Vdata": {
+                "type": "sap.ui.model.json.JSONModel",
+                "uri": "Voyage.json"
+            },
+            "": {
+                "preload": true,
+                "dataSource": "MARINE_TRAFFIC_API_SRV",
+                "settings": {
+                    "defaultBindingMode": "TwoWay",
+                    "defaultCountMode": "Inline",
+                    "refreshAfterChange": false,
+                    "metadataUrlParams": {
+                        "sap-value-list": "none"
+                    }
+                }
+            },
+            "NAUTICALCV_SRV": {
+                "dataSource": "NAUTICALCV_SRV",
+                "preload": true,
+                "settings": {
+                    "defaultBindingMode": "TwoWay",
+                    "defaultCountMode": "Inline",
+                    "refreshAfterChange": false,
+                    "metadataUrlParams": {
+                        "sap-value-list": "none"
+                    }
+                }
+            },
+            "CONTROLLER_SRV": {
+                "dataSource": "CONTROLLER_SRV",
+                "preload": true,
+                "settings": {
+                    "defaultBindingMode": "TwoWay",
+                    "defaultCountMode": "Inline",
+                    "refreshAfterChange": false,
+                    "metadataUrlParams": {
+                        "sap-value-list": "none"
+                    }
+                }
+            },
+            "VENDOR_SRV": {
+                "dataSource": "VENDOR_SRV",
+                "preload": true,
+                "settings": {
+                    "defaultBindingMode": "TwoWay",
+                    "defaultCountMode": "Inline",
+                    "refreshAfterChange": false,
+                    "metadataUrlParams": {
+                        "sap-value-list": "none"
+                    }
+                }
+            }
+        },
+        "resources": {
+            "css": [
+                {
+                    "uri": "css/style.css"
+                }
+            ]
+        },
+        "routing": {
+            "config": {
+                "routerClass": "sap.m.routing.Router",
+                "viewType": "XML",
+                "async": true,
+                "viewPath": "nauticalfe.view",
+                "controlAggregation": "pages",
+                "controlId": "app",
+                "clearControlAggregation": false
+            },
+            "routes": [
+                {
+                    "name": "RouteView1",
+                    "pattern": ":?query:",
+                    "target": [
+                        "TargetView1"
+                    ]
+                },
+                {
+                    "name": "RouteView2",
+                    "pattern": "page2",
+                    "target": [
+                        "TargetView2"
+                    ]
+                },
+                {
+                    "name": "RouteView3",
+                    "pattern": "page3",
+                    "target": [
+                        "TargetView3"
+                    ]
+                },
+                {
+                    "name": "RouteBidCont",
+                    "pattern": "Bidding",
+                    "target": [
+                        "TargetBidCont"
+                    ]
+                },
+                {
+                    "name": "RouteBidObj",
+                    "pattern": "BiddingObject/{bidObjPath}",
+                    "target": [
+                        "TargetBidObj"
+                    ]
+                },
+                {
+                    "name": "Routedash",
+                    "pattern": "dashboard",
+                    "target": [
+                        "Targetdash"
+                    ]
+                },
+                {
+                    "name": "TransView",
+                    "pattern": "TransViewObj",
+                    "target": [
+                        "TargetTransView"
+                    ]
+                },
+                {
+                    "name": "MastView",
+                    "pattern": "MastViewObj",
+                    "target": [
+                        "TargetMastView"
+                    ]
+                },
+                {
+                    "name": "RouteTrChangeVoyage",
+                    "pattern": "fr",
+                    "target": [
+                        "TargetTrChangeVoyage"
+                    ]
+                },
+                {
+                    "name": "TrVoyageOptions",
+                    "pattern": "vo",
+                    "target": [
+                        "TargetTrVoyageOptions"
+                    ]
+                },
+                {
+                    "name": "TrCreateVoyage",
+                    "pattern": "cvoy",
+                    "target": [
+                        "TargetTrCreateVoyage"
+                    ]
+                },
+                {
+                    "name": "TrCreateVoyagePlan",
+                    "pattern": "cvoyPlan",
+                    "target": [
+                        "TargetTrCreateVoyagePlan"
+                    ]
+                },
+                {
+                    "name": "RoutePortLocMaster",
+                    "pattern": "portLoc",
+                    "target": [
+                        "TargetPortLocMaster"
+                    ]
+                },
+                {
+                  "name": "RouteCostMaster",
+                  "pattern": "CostMaster",
+                  "target": [
+                      "TargetCostMaster"
+                  ]
+              }
+            ],
+            "targets": {
+                "TargetView1": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "viewId": "View1",
+                    "viewName": "View1"
+                },
+                "TargetView2": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "viewId": "View2",
+                    "viewName": "View2"
+                },
+                "TargetView3": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "viewId": "View3",
+                    "viewName": "View3"
+                },
+                "TargetBidCont": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "viewId": "BidCont",
+                    "viewName": "BidCont"
+                },
+                "TargetBidObj": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "viewId": "BidObj",
+                    "viewName": "BidObj"
+                },
+                "Targetdash": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "viewId": "dash",
+                    "viewName": "dash"
+                },
+                "TargetTransView": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "viewId": "TransView",
+                    "viewName": "TransView"
+                },
+                "TargetMastView": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "viewId": "MastView",
+                    "viewName": "MastView"
+                },
+                "TargetTrChangeVoyage": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "viewId": "TrChangeVoyage",
+                    "viewName": "TrChangeVoyage"
+                },
+                "TargetTrVoyageOptions": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "viewId": "TrVoyageOptions",
+                    "viewName": "TrVoyageOptions"
+                },
+                "TargetTrCreateVoyage": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "viewId": "TrCreateVoyage",
+                    "viewName": "TrCreateVoyage"
+                },
+                "TargetTrCreateVoyagePlan": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "viewId": "TrCreateVoyagePlan",
+                    "viewName": "TrCreateVoyagePlan"
+                },
+                "TargetPortLocMaster": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "viewId": "PortLocMaster",
+                    "viewName": "PortLocMaster"
+                },
+                "TargetCostMaster": {
+                  "viewType": "XML",
+                  "transition": "slide",
+                  "clearControlAggregation": false,
+                  "viewId": "CostMaster",
+                  "viewName": "CostMaster"
+              }
+                
+            }
+        },
+        "rootView": {
+            "viewName": "nauticalfe.view.App",
+            "type": "XML",
+            "async": true,
+            "id": "App"
+        }
     }
-  },
-  "sap.ui": {
-    "technology": "UI5",
-    "icons": {
-      "icon": "",
-      "favIcon": "",
-      "phone": "",
-      "phone@2": "",
-      "tablet": "",
-      "tablet@2": ""
-    },
-    "deviceTypes": {
-      "desktop": true,
-      "tablet": true,
-      "phone": true
-    }
-  },
-  "sap.ui5": {
-    "flexEnabled": true,
-    "dependencies": {
-      "minUI5Version": "1.119.2",
-      "libs": {
-        "sap.m": {},
-        "sap.ui.core": {},
-        "sap.f": {},
-        "sap.suite.ui.generic.template": {},
-        "sap.ui.comp": {},
-        "sap.ui.generic.app": {},
-        "sap.ui.table": {},
-        "sap.ushell": {}
-      }
-    },
-    "contentDensities": {
-      "compact": true,
-      "cozy": true
-    },
-    "models": {
-      "i18n": {
-        "type": "sap.ui.model.resource.ResourceModel",
-        "settings": {
-          "bundleName": "nauticalfe.i18n.i18n"
-        }
-      },
-      "bidData":{
-        "type": "sap.ui.model.json.JSONModel",
-        "uri": "Bid.json"
-      },
-      "Vdata":{
-        "type": "sap.ui.model.json.JSONModel",
-        "uri": "Voyage.json"
-      }
-    },
-    "resources": {
-      "css": [
-        {
-          "uri": "css/style.css"
-        }
-      ]
-    },
-    "routing": {
-      "config": {
-        "routerClass": "sap.m.routing.Router",
-        "viewType": "XML",
-        "async": true,
-        "viewPath": "nauticalfe.view",
-        "controlAggregation": "pages",
-        "controlId": "app",
-        "clearControlAggregation": false
-      },
-      "routes": [
-        {
-          "name": "RouteView1",
-          "pattern": ":?query:",
-          "target": [
-            "TargetView1"
-          ]
-        },
-        {
-          "name": "RouteView2",
-          "pattern": "page2",
-          "target": [
-            "TargetView2"
-          ]
-        },
-        {
-          "name": "RouteView3",
-          "pattern": "page3",
-          "target": [
-            "TargetView3"
-          ]
-        },
-        {
-          "name": "RouteBidCont",
-          "pattern": "Bidding",
-          "target": [
-            "TargetBidCont"
-          ]
-        },
-        {
-          "name": "RouteBidObj",
-          "pattern": "BiddingObject/{bidObjPath}",
-          "target": [
-            "TargetBidObj"
-          ]
-        },
-        {
-          "name": "Routedash",
-          "pattern": "dashboard",
-          "target": [
-            "Targetdash"
-          ]
-        },
-        {
-          "name": "TransView",
-          "pattern": "TransViewObj",
-          "target": [
-            "TargetTransView"
-          ]
-        },
-        {
-          "name": "MastView",
-          "pattern": "MastViewObj",
-          "target": [
-            "TargetMastView"
-          ]
-        },
-        {
-          "name": "RouteTrChangeVoyage",
-          "pattern": "fr",
-          "target": [
-            "TargetTrChangeVoyage"
-          ]
-        },
-        {
-          "name": "TrVoyageOptions",
-          "pattern": "vo",
-          "target": [
-            "TargetTrVoyageOptions"
-          ]
-        },
-        {
-          "name": "TrCreateVoyage",
-          "pattern": "cvoy",
-          "target": [
-            "TargetTrCreateVoyage"
-          ]
-        },
-        {
-          "name": "TrCreateVoyagePlan",
-          "pattern": "cvoyPlan",
-          "target": [
-            "TargetTrCreateVoyagePlan"
-          ]
-        }
-        
-
-      ],
-      "targets": {
-        "TargetView1": {
-          "viewType": "XML",
-          "transition": "slide",
-          "clearControlAggregation": false,
-          "viewId": "View1",
-          "viewName": "View1"
-        },
-        "TargetView2": {
-          "viewType": "XML",
-          "transition": "slide",
-          "clearControlAggregation": false,
-          "viewId": "View2",
-          "viewName": "View2"
-        },
-        "TargetView3": {
-          "viewType": "XML",
-          "transition": "slide",
-          "clearControlAggregation": false,
-          "viewId": "View3",
-          "viewName": "View3"
-        },
-        "TargetBidCont": {
-          "viewType": "XML",
-          "transition": "slide",
-          "clearControlAggregation": false,
-          "viewId": "BidCont",
-          "viewName": "BidCont"
-        },
-        "TargetBidObj": {
-          "viewType": "XML",
-          "transition": "slide",
-          "clearControlAggregation": false,
-          "viewId": "BidObj",
-          "viewName": "BidObj"
-        },
-        "Targetdash": {
-          "viewType": "XML",
-          "transition": "slide",
-          "clearControlAggregation": false,
-          "viewId": "dash",
-          "viewName": "dash"
-        },
-        "TargetTransView": {
-          "viewType": "XML",
-          "transition": "slide",
-          "clearControlAggregation": false,
-          "viewId": "TransView",
-          "viewName": "TransView"
-        },
-        "TargetMastView": {
-          "viewType": "XML",
-          "transition": "slide",
-          "clearControlAggregation": false,
-          "viewId": "MastView",
-          "viewName": "MastView"
-        },
-        "TargetTrChangeVoyage": {
-          "viewType": "XML",
-          "transition": "slide",
-          "clearControlAggregation": false,
-          "viewId": "TrChangeVoyage",
-          "viewName": "TrChangeVoyage"
-        },
-        "TargetTrVoyageOptions": {
-          "viewType": "XML",
-          "transition": "slide",
-          "clearControlAggregation": false,
-          "viewId": "TrVoyageOptions",
-          "viewName": "TrVoyageOptions"
-        },
-        "TargetTrCreateVoyage": {
-          "viewType": "XML",
-          "transition": "slide",
-          "clearControlAggregation": false,
-          "viewId": "TrCreateVoyage",
-          "viewName": "TrCreateVoyage"
-        },
-        "TargetTrCreateVoyagePlan": {
-          "viewType": "XML",
-          "transition": "slide",
-          "clearControlAggregation": false,
-          "viewId": "TrCreateVoyagePlan",
-          "viewName": "TrCreateVoyagePlan"
-        }
-        
-      }
-    },
-    "rootView": {
-      "viewName": "nauticalfe.view.App",
-      "type": "XML",
-      "async": true,
-      "id": "App"
-    }
-  }
 }
