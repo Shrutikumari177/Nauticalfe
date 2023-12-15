@@ -359,7 +359,86 @@
                 "target": [
                     "TargetVesselType"
                 ]
+            },
+            {
+                "name": "RouteMasterVoyageType",
+                "pattern": "MasteVoyageType",
+                "target": [
+                    "TargetMasterVoyageType"
+                ]
+            },
+            {
+                "name": "RouteMasterCurrencyType",
+                "pattern": "MasterCurrencyType",
+                "target": [
+                    "TargetMasterCurrencyType"
+                ]
+            },
+            {
+                "name": "RouteMasterClassMaster",
+                "pattern": "ClassMaster",
+                "target": [
+                    "TargetClassMaster"
+                ]
+            },
+            {
+                "name": "RouteMasterVesselType",
+                "pattern": "MasterVesselType",
+                "target": [
+                    "TargetMasterVesselType"
+                ]
+            },
+            {
+                "name": "RouteUoM",
+                "pattern": "UoM",
+                "target": [
+                    "TargetUoMMaster"
+                ]
+            },
+            {
+                "name": "RouteBidMaster",
+                "pattern": "BidMaster",
+                "target": [
+                    "TargetBidMaster"
+                ]
+            },
+            {
+                "name": "RouteRouteMaster",
+                "pattern": "RouteMaster",
+                "target": [
+                    "TargetRouteMaster"
+                ]
+            },
+            {
+                "name": "RouteCountryMasterUpd",
+                "pattern": "CountryMasterUpd",
+                "target": [
+                    "TargetCountryMasterUpd"
+                ]
+            },
+            {
+                "name": "RouteCountryMaster",
+                "pattern": "CountryMaster",
+                "target": [
+                    "TargetCountryMaster"
+                ]
+            },
+            {
+                "name": "RouteMarinePathUpd",
+                "pattern": "MarinePathUpd",
+                "target": [
+                    "TargetMarinePathUpd"
+                ]
+            },
+            {
+                "name": "RouteMarineDisUpd",
+                "pattern": "MarineDisUpd",
+                "target": [
+                    "TargetMarineDisUpd"
+                ]
             }
+
+            
             ],
             "targets": {
                 "TargetView1": {
@@ -544,12 +623,84 @@
                 "viewId": "MastApiUrl",
                 "viewName": "MastApiUrl"
             },
-            "TargetVesselType": {
+            "TargetMasterVoyageType":{
                 "viewType": "XML",
                 "transition": "slide",
                 "clearControlAggregation": false,
-                "viewId": "VesselType",
-                "viewName": "VesselType"
+                "viewId": "MasterVoyageType",
+                "viewName": "MasterVoyageType"
+            },
+            
+            "TargetMasterCurrencyType":{
+                "viewType": "XML",
+                "transition": "slide",
+                "clearControlAggregation": false,
+                "viewId": "MasterCurrencyType",
+                "viewName": "MasterCurrencyType"
+            },
+            "TargetClassMaster":{
+                "viewType": "XML",
+                "transition": "slide",
+                "clearControlAggregation": false,
+                "viewId": "ClassMaster",
+                "viewName": "ClassMaster"
+            },
+            "TargetMasterVesselType":{
+                "viewType": "XML",
+                "transition": "slide",
+                "clearControlAggregation": false,
+                "viewId": "MasterVesselType",
+                "viewName": "MasterVesselType"
+            },
+            "TargetBidMaster": {
+                "viewType": "XML",
+                "transition": "slide",
+                "clearControlAggregation": false,
+                "viewId": "MastBidMaster",
+                "viewName": "MastBidMaster"
+            },
+            "TargetRouteMaster": {
+                "viewType": "XML",
+                "transition": "slide",
+                "clearControlAggregation": false,
+                "viewId": "RouteMaster",
+                "viewName": "RouteMaster"
+            },
+            
+            "TargetUoMMaster": {
+                "viewType": "XML",
+                "transition": "slide",
+                "clearControlAggregation": false,
+                "viewId": "UOMMaster",
+                "viewName": "UOMMaster"
+            },
+            "TargetCountryMaster": {
+                "viewType": "XML",
+                "transition": "slide",
+                "clearControlAggregation": false,
+                "viewId": "MastCountryMaster",
+                "viewName": "MastCountryMaster"
+            },
+            "TargetCountryMasterUpd": {
+                "viewType": "XML",
+                "transition": "slide",
+                "clearControlAggregation": false,
+                "viewId": "MastCountryMasterUpload",
+                "viewName": "MastCountryMasterUpload"
+            },
+            "TargetMarineDisUpd": {
+                "viewType": "XML",
+                "transition": "slide",
+                "clearControlAggregation": false,
+                "viewId": "MastMarineDisUpd",
+                "viewName": "MastMarineDisUpd"
+            },
+            "TargetMarinePathUpd": {
+                "viewType": "XML",
+                "transition": "slide",
+                "clearControlAggregation": false,
+                "viewId": "MastMarinePathUpd",
+                "viewName": "MastMarinePathUpd"
             }
 
 
