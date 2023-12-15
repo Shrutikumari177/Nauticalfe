@@ -31,7 +31,27 @@ sap.ui.define(
         onRefDocIndicator:function(){
           const oRouter = this.getOwnerComponent().getRouter();
                 oRouter.navTo("RouteRefDocIndicator");
-        }
+        },
+        onBusinessPress: function() {
+          const oRouter = this.getOwnerComponent().getRouter();
+          oRouter.navTo("RouteBusinessPartner");
+        },
+        onConfigPress: function() {
+          const oRouter = this.getOwnerComponent().getRouter();
+          oRouter.navTo("RouteConfigRelease");
+        },
+        
+        onPortUpload:function(){
+          const oRouter = this.getOwnerComponent().getRouter();
+          oRouter.navTo("RoutePortUpload");
+        },
+        onApiurl:function(){
+          const oRouter = this.getOwnerComponent().getRouter();
+          oRouter.navTo("RouteMastApiUrl");
+        },
+
+
+
         
       });    }
   );
