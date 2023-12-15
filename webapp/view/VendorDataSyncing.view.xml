@@ -10,7 +10,7 @@
                     <Button id="button" icon="sap-icon://slim-arrow-down" iconFirst="false" text="More" ariaHasPopup="Menu"/>
                 </contentLeft>
                 <contentRight>
-                    <Button text="Exit" press="MastPage"></Button>
+                    <Button id="_IDGenButton2" text="Exit" press="MastPage"></Button>
                 </contentRight>
             </Bar>
             <Text id="EnterDetailsId" text="Enter Details" class="EnterDetailsHeader"></Text>
@@ -24,10 +24,10 @@
                 <Button id="searchBtn" icon="../images/search.png"  class="searchIcon"></Button> -->
                 <SearchField id="searchField2" width="60%" search=".onFilterPosts" />
             </HBox>
-            <Bar class="exeBtn" >
+            <Bar id="_IDGenBar2" class="exeBtn" >
             <contentRight>
-                <HBox>
-                    <Button text="Execute"></Button>
+                <HBox id="_IDGenHBox2">
+                    <Button id="_IDGenButton3" text="Execute"></Button>
                 </HBox>
             </contentRight>
         </Bar>
