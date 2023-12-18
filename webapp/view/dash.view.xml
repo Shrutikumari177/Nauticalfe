@@ -9,7 +9,7 @@ xmlns:core="sap.ui.core"
     
 
     <Page id="_IDGenPage1"  >
-     <headerContent>
+        <headerContent>
             <!-- Your header content goes here -->
             <Bar id="_IDGenBar1" class="customHeader">
                 <contentLeft>
@@ -17,7 +17,7 @@ xmlns:core="sap.ui.core"
                         src="sap-icon://nav-back"
                         class="size1"
                         color="#FFFFFF"
-                        press="onBackPress"
+                        press="backPress"
                     />
                     <core:Icon id="_IDGenIcon2"
                         src="sap-icon://home"
