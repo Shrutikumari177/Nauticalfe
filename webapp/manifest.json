@@ -242,20 +242,21 @@
                     ]
                 },
                 {
-                    "name": "TrCreateVoyage",
+                    "name": "TrCaptureVoyage",
                     "pattern": "cvoy",
                     "target": [
-                        "TargetTrCreateVoyage"
+                        "TargetTrCaptureVoyage"
                     ]
                 },
                 {
-                    "name": "TrCreateVoyagePlan",
-                    "pattern": "cvoyPlan",
+                    "name": "TrCaptureVoyagePlan",
+                    "pattern": "cvoy",
                     "target": [
-                        "TargetTrCreateVoyagePlan"
+                        "TargetTrCaptureVoyagePlan"
                     ]
                 },
-                {
+                
+               {
                     "name": "RoutePortLocMaster",
                     "pattern": "portLoc",
                     "target": [
@@ -436,6 +437,13 @@
                 "target": [
                     "TargetMarineDisUpd"
                 ]
+            },
+            {
+                "name": "RoutePortUpload",
+                "pattern": "PortUpload",
+                "target": [
+                    "TargetPortUpload"
+                ]
             }
 
             
@@ -511,20 +519,22 @@
                     "viewId": "TrVoyageOptions",
                     "viewName": "TrVoyageOptions"
                 },
-                "TargetTrCreateVoyage": {
+                "TargetTrCaptureVoyage": {
                     "viewType": "XML",
                     "transition": "slide",
                     "clearControlAggregation": false,
-                    "viewId": "TrCreateVoyage",
-                    "viewName": "TrCreateVoyage"
+                    "viewId": "TrCaptureVoyage",
+                    "viewName": "TrCaptureVoyage"
                 },
-                "TargetTrCreateVoyagePlan": {
+                
+                "TargetTrCaptureVoyagePlan": {
                     "viewType": "XML",
                     "transition": "slide",
                     "clearControlAggregation": false,
-                    "viewId": "TrCreateVoyagePlan",
-                    "viewName": "TrCreateVoyagePlan"
+                    "viewId": "TrCaptureVoyagePlan",
+                    "viewName": "TrCaptureVoyagePlan"
                 },
+                
                 "TargetPortLocMaster": {
                     "viewType": "XML",
                     "transition": "slide",
@@ -701,6 +711,13 @@
                 "clearControlAggregation": false,
                 "viewId": "MastMarinePathUpd",
                 "viewName": "MastMarinePathUpd"
+            },
+            "TargetPortUpload": {
+                "viewType": "XML",
+                "transition": "slide",
+                "clearControlAggregation": false,
+                "viewId": "MastPortUpload",
+                "viewName": "MastPortUpload"
             }
 
 

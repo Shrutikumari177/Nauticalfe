@@ -2,49 +2,49 @@
     xmlns:html="http://www.w3.org/1999/xhtml"
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns:core="sap.ui.core"
     xmlns="sap.m" xmlns:tnt="sap.tnt">
-        <Page >
+        <Page id="_IDGenPage1" >
          <headerContent>
             <!-- Your header content goes here -->
-            <Bar class="customHeader">
+            <Bar id="_IDGenBar2" class="customHeader">
                 <contentLeft>
-                    <core:Icon
+                    <core:Icon id="_IDGenIcon1"
                         src="sap-icon://nav-back"
                         class="size1"
                         color="#FFFFFF"
                         press="onBackPress"
                     />
-                    <core:Icon
+                    <core:Icon id="_IDGenIcon2"
                         src="sap-icon://home"
                         class="size1"
                         color="#FFFFFF"
                         press="onBackPressHome"
                     />
-                    <Image
+                    <Image id="_IDGenImage1"
                         src="../images/ingenxlogo.jpg"
                         height="75%"
                     />
-                    <Text
+                    <Text id="_IDGenText1"
                         class="textBid"
                         text="Upload Program for Dummy Latitude and Longitude for Val"
                     />
                 </contentLeft>
                 <contentRight>
-                    <core:Icon
+                    <core:Icon id="_IDGenIcon3"
                         src="sap-icon://search"
                         class="size1"
                         color="#FFFFFF"
                     >
                         <core:layoutData>
-                            <FlexItemData growFactor="1" />
+                            <FlexItemData id="_IDGenFlexItemData1" growFactor="1" />
                         </core:layoutData>
                     </core:Icon>
-                    <core:Icon
+                    <core:Icon id="_IDGenIcon4"
                         src="sap-icon://SAP-icons-TNT/user"
                         class="size1"
                         color="#FFFFFF"
                     >
                         <core:layoutData>
-                            <FlexItemData growFactor="1" />
+                            <FlexItemData id="_IDGenFlexItemData2" growFactor="1" />
                         </core:layoutData>
                     </core:Icon>
                 </contentRight>
@@ -57,7 +57,7 @@
             <Button id="button" icon="sap-icon://slim-arrow-down" iconFirst="false" text="More" press="onPress" ariaHasPopup="Menu"/>
         </contentLeft>
         <contentRight>
-            <Button text="Exit" press="MastPage"></Button>
+            <Button id="_IDGenButton4" text="Exit" press="MastPage"></Button>
         </contentRight>
         </Bar>
         <HBox id="_IDGenHBox1" alignItems="Center" class="masterFileUpload">
@@ -65,8 +65,8 @@
             <Input id="_IDGenInput1" width="450px"></Input>
             <Button id="_IDGenButton3" icon="sap-icon://copy" press="fileupload"></Button>
         </HBox>
-        <HBox class="masteroptionsfooter">
-            <Button text="Execute" class="masterbuttonsalign"></Button>
+        <HBox id="_IDGenHBox2" class="masteroptionsfooter">
+            <Button id="_IDGenButton5" text="Execute" class="masterbuttonsalign"></Button>
         </HBox>
         </Page>
 </mvc:View>

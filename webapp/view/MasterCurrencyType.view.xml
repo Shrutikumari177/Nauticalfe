@@ -14,42 +14,42 @@
     >
         <headerContent>
             <!-- Your header content goes here -->
-            <Bar class="customHeader">
+            <Bar id="_IDGenBar2" class="customHeader">
                 <contentLeft>
-                    <Button
+                    <Button id="_IDGenButton11"
                         class="customHeaderButton"
                         icon="sap-icon://nav-back"
                         press="onBackPress"
                     />
-                    <Image
+                    <Image id="_IDGenImage1"
                         src="../images/Ingenx.png"
                         height="2rem"
                         width="6rem"
                         
                     />
-                    <Text
+                    <Text id="_IDGenText3"
                         class="textBid"
                         text="Change View :Master Details for Currency: Overview"
                     />
                 </contentLeft>
                 <contentRight>
                     <SearchField id="searchField" width="75%" search="onSearch" />
-                    <core:Icon
+                    <core:Icon id="_IDGenIcon1"
                         src="sap-icon://search"
                         class="size1"
                         color="#FFFFFF"
                     >
                         <core:layoutData>
-                            <FlexItemData growFactor="1" />
+                            <FlexItemData id="_IDGenFlexItemData1" growFactor="1" />
                         </core:layoutData>
                     </core:Icon>
-                    <core:Icon
+                    <core:Icon id="_IDGenIcon2"
                         src="sap-icon://person-placeholder"
                         class="size1"
                         color="#FFFFFF"
                     >
                         <core:layoutData>
-                            <FlexItemData growFactor="1" />
+                            <FlexItemData id="_IDGenFlexItemData2" growFactor="1" />
                         </core:layoutData>
                     </core:Icon>
                 </contentRight>
@@ -170,16 +170,16 @@
                     class="_IDGenBar1"
                 >
                     <contentLeft>
-                        <Button
+                        <Button id="_IDGenButton12"
                             text="New Entries"
                             press="onShowDialogForCreate"
                         />
-                        <Button text="Copy As" />
-                        <Button text="Delete" press="onDeleteVoyageType" />
-                        <Button text="Update" press="onShowUpdateDialog" />
-                        <Button text="Select All" />
-                        <Button text="Select Block" />
-                        <Button text="Deselect All" />
+                        <Button id="_IDGenButton13" text="Copy As" />
+                        <Button id="_IDGenButton14" text="Delete" press="onDeleteVoyageType" />
+                        <Button id="_IDGenButton15" text="Update" press="onShowUpdateDialog" />
+                        <Button id="_IDGenButton16" text="Select All" />
+                        <Button id="_IDGenButton17" text="Select Block" />
+                        <Button id="_IDGenButton18" text="Deselect All" />
                         <Button
                             id="button"
                             icon="sap-icon://slim-arrow-down"
@@ -190,13 +190,13 @@
                         />
                     </contentLeft>
                     <contentRight>
-                        <core:Icon
+                        <core:Icon id="_IDGenIcon3"
                             src="sap-icon://print"
                             class="size1"
                             color="#FF0000"
                         />
-                        <Button text="Display" />
-                        <Button
+                        <Button id="_IDGenButton19" text="Display" />
+                        <Button id="_IDGenButton20"
                             text="Exit"
                             press="MastPage"
                         />
@@ -251,10 +251,10 @@
             </Panel>
         </content>
         <footer>
-        <OverflowToolbar design="Auto">
-      <ToolbarSpacer />
-      <Button text="Save" type="Neutral"></Button>
-      <Button text="Cancel" type="Negative" ></Button>
+        <OverflowToolbar id="_IDGenOverflowToolbar1" design="Auto">
+      <ToolbarSpacer id="_IDGenToolbarSpacer3" />
+      <Button id="_IDGenButton21" text="Save" ></Button>
+      <Button id="_IDGenButton22" text="Cancel"  ></Button>
       </OverflowToolbar>
         </footer>
     </Page>

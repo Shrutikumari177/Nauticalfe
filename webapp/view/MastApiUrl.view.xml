@@ -48,8 +48,5 @@
                 </cells>
             </ColumnListItem>
         </Table>
-        <HBox id="_IDGenHBox1">
-            <Button id="_IDGenButton11" text="Save"></Button>
-            <Button id="_IDGenButton12" text="Cancel"></Button>
-        </HBox>
+       
 </mvc:View>

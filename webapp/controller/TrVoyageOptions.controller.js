@@ -19,7 +19,7 @@ sap.ui.define([
             },
             CreateVoyage:function(){
                 const oRouter = this.getOwnerComponent().getRouter();
-                oRouter.navTo("TrCreateVoyage")    
+                oRouter.navTo("TrCaptureVoyage")    
             },
             
         });

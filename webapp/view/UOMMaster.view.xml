@@ -9,46 +9,46 @@
     <Page id="page">
         <headerContent>
             <!-- Your header content goes here -->
-            <Bar class="customHeader">
+            <Bar id="_IDGenBar2" class="customHeader">
                 <contentLeft>
-                    <core:Icon
+                    <core:Icon id="_IDGenIcon1"
                         src="sap-icon://nav-back"
                         class="size1"
                         color="#FFFFFF"
                         press="onBackPress"
                     />
-                    <core:Icon
+                    <core:Icon id="_IDGenIcon2"
                         src="sap-icon://home"
                         class="size1"
                         color="#FFFFFF"
                         press="onBackPressHome"
                     />
-                    <Image
+                    <Image id="_IDGenImage1"
                         src="../images/ingenxlogo.jpg"
                         height="75%"
                     />
-                    <Text
+                    <Text id="_IDGenText1"
                         class="textBid"
                         text="Change View :Master Details for Unit Of Mesurment: Overview"
                     />
                 </contentLeft>
                 <contentRight>
-                    <core:Icon
+                    <core:Icon id="_IDGenIcon3"
                         src="sap-icon://search"
                         class="size1"
                         color="#FFFFFF"
                     >
                         <core:layoutData>
-                            <FlexItemData growFactor="1" />
+                            <FlexItemData id="_IDGenFlexItemData1" growFactor="1" />
                         </core:layoutData>
                     </core:Icon>
-                    <core:Icon
+                    <core:Icon id="_IDGenIcon4"
                         src="sap-icon://SAP-icons-TNT/user"
                         class="size1"
                         color="#FFFFFF"
                     >
                         <core:layoutData>
-                            <FlexItemData growFactor="1" />
+                            <FlexItemData id="_IDGenFlexItemData2" growFactor="1" />
                         </core:layoutData>
                     </core:Icon>
                 </contentRight>
@@ -59,13 +59,13 @@
             class="_IDGenBar1"
         >
             <contentLeft>
-                <Button text="New Entries" />
-                <Button text="Copy As" />
-                <Button text="Delete" />
-                <Button text="Undo Change" />
-                <Button text="Select All" />
-                <Button text="Select Block" />
-                <Button text="Deselect All" />
+                <Button id="_IDGenButton1" text="New Entries" />
+                <Button id="_IDGenButton2" text="Copy As" />
+                <Button id="_IDGenButton3" text="Delete" />
+                <Button id="_IDGenButton4" text="Undo Change" />
+                <Button id="_IDGenButton5" text="Select All" />
+                <Button id="_IDGenButton6" text="Select Block" />
+                <Button id="_IDGenButton7" text="Deselect All" />
                 <Button
                     id="button"
                     icon="sap-icon://slim-arrow-down"
@@ -76,60 +76,56 @@
                 />
             </contentLeft>
             <contentRight>
-                <core:Icon
+                <core:Icon id="_IDGenIcon5"
                         src="sap-icon://print"
                         class="size1"
                         color="#FF0000"
                     />
-                <Button text="Display" />
-                <Button
+                <Button id="_IDGenButton8" text="Display" />
+                <Button id="_IDGenButton9"
                     text="Exit"
                     press="onPressExit"
                 />
             </contentRight>
         </Bar>
-        <Text
+        <Text id="_IDGenText2"
             text="UOM Master"
             class="masterheadings"
         />
-        <Table
+        <Table id="_IDGenTable1"
             width="100%"
             class="mastertables"
             items="{NAUTICALCV_SRV>/CargoUnitSet}"
         >
             <columns>
-                <Column width="40px">
-                    <Label text=" " />
+                <Column id="_IDGenColumn1" width="40px">
+                    <Label id="_IDGenLabel1" text=" " />
                 </Column>
-                <Column>
-                    <Label text="Uom" />
+                <Column id="_IDGenColumn2">
+                    <Label id="_IDGenLabel2" text="Uom" />
                 </Column>
-                <Column>
-                    <Label text="UoM Description" />
+                <Column id="_IDGenColumn3">
+                    <Label id="_IDGenLabel3" text="UoM Description" />
                 </Column>
                
                
             </columns>
-            <ColumnListItem>
+            <ColumnListItem id="_IDGenColumnListItem1">
                 <cells>
-                    <CheckBox />
-                    <Text text="{NAUTICALCV_SRV>Uom}" />
-                    <Text text="{NAUTICALCV_SRV>Uomdes}" />
+                    <CheckBox id="_IDGenCheckBox1" />
+                    <Text id="_IDGenText3" text="{NAUTICALCV_SRV>Uom}" />
+                    <Text id="_IDGenText4" text="{NAUTICALCV_SRV>Uomdes}" />
                    
                 </cells>
             </ColumnListItem>
         </Table>
-        <HBox>
-            <Button
-                text="Save"
-               
-            />
-            <Button
-                text="Cancel"
-                press="MastPage"
-            />
-        </HBox>
- 
+        <footer>
+                <OverflowToolbar id="_IDGenOverflowToolbar1" design="Auto">
+                <ToolbarSpacer id="_IDGenToolbarSpacer1" />
+                <Button id="_IDGenButton10" text="Save" ></Button>
+                <Button id="_IDGenButton11" text="Cancel"  ></Button>
+                </OverflowToolbar>
+            </footer>
        
     </Page>
 </mvc:View>

@@ -206,13 +206,14 @@
                     </cells>
                 </ColumnListItem>
             </Table>
-            <HBox id="_IDGenHBox1">
-                <Button id="_IDGenButton10" text="Save" />
-                <Button id="_IDGenButton11"
-                    text="Cancel"
-                    press="MastPage"
-                />
-            </HBox>
+            
         </VBox>
+        <footer>
+                <OverflowToolbar id="_IDGenOverflowToolbar1" design="Auto">
+                <ToolbarSpacer id="_IDGenToolbarSpacer1" />
+                <Button id="_IDGenButton10" text="Save" ></Button>
+                <Button id="_IDGenButton11" text="Cancel"  ></Button>
+                </OverflowToolbar>
+            </footer>
     </Page>
 </mvc:View>

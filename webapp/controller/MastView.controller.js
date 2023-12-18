@@ -102,6 +102,10 @@ sap.ui.define(
           const oRouter = this.getOwnerComponent().getRouter();
           oRouter.navTo("RouteMarineDisUpd");
         },
+        onPortUpload:function(){
+          const oRouter = this.getOwnerComponent().getRouter();
+          oRouter.navTo("RoutePortUpload");
+        }
 
 
 

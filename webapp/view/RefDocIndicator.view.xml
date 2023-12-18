@@ -50,7 +50,7 @@
                 <Button id="_IDGenButton10" text="Exit" press="onBackPress"/>
             </contentRight>
         </Bar>
-        <Text text="Refrence Document Search Help" class="masterheadings"></Text>
+        <Text id="_IDGenText2" text="Refrence Document Search Help" class="masterheadings"></Text>
         <Table width="100%" class="mastertables" visible="true" mode="MultiSelect"
             id="firstTableId">
             <columns>
@@ -160,19 +160,13 @@
                                     </cells>
             </ColumnListItem>
         </Table>
-        <Bar >
-        <contentRight>
-        <VBox id="toHide">
-            <HBox id="_IDGenHBox1">
-                <Button id="_IDGenButton11" text="Save" />
-                <Button id="_IDGenButton12"
-                    text="Cancel"
-                    press="MastPage"
-                />
-            </HBox>
-        </VBox>
-        </contentRight>
-        </Bar>
+        <footer>
+                <OverflowToolbar id="_IDGenOverflowToolbar1" design="Auto">
+                <ToolbarSpacer id="_IDGenToolbarSpacer1" />
+                <Button id="_IDGenButton11" text="Save" ></Button>
+                <Button id="_IDGenButton12" text="Cancel"  ></Button>
+                </OverflowToolbar>
+            </footer>
         
         
 

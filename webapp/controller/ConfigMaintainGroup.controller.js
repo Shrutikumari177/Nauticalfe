@@ -9,11 +9,11 @@ sap.ui.define(
         onInit() {
         var oView = this.getView();
         var oFirstTable = oView.byId("firstTableId");
-        var oNewTable = oView.byId("toHide");
+        // var oNewTable = oView.byId("toHide");
   
        
         // oFirstTable.setVisible(true);
-        oNewTable.setVisible(false);
+        // oNewTable.setVisible(false);
         },
         onBackPress: function () {
             const oRouter = this.getOwnerComponent().getRouter();

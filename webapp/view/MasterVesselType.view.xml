@@ -255,8 +255,8 @@
         <footer>
         <OverflowToolbar id="_IDGenOverflowToolbar1" design="Auto">
       <ToolbarSpacer id="_IDGenToolbarSpacer3" />
-      <Button id="_IDGenButton21" text="Save" type="Neutral"></Button>
-      <Button id="_IDGenButton22" text="Cancel" type="Negative" ></Button>
+      <Button id="_IDGenButton21" text="Save" ></Button>
+      <Button id="_IDGenButton22" text="Cancel"  ></Button>
       </OverflowToolbar>
         </footer>
     </Page>
