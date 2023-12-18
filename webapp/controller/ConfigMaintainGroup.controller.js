@@ -9,13 +9,19 @@ sap.ui.define(
         onInit() {
         var oView = this.getView();
         var oFirstTable = oView.byId("firstTableId");
-        // var oNewTable = oView.byId("toHide");
-  
-       
-        // oFirstTable.setVisible(true);
-        // oNewTable.setVisible(false);
+        
         },
         onBackPress: function () {
+            const oRouter = this.getOwnerComponent().getRouter();
+            oRouter.navTo("MastView");
+          },
+          onBackPress: function () {
+            const oRouter = this.getOwnerComponent().getRouter();
+            oRouter.navTo("MastView");
+          },onBackPressHome: function () {
+            const oRouter = this.getOwnerComponent().getRouter();
+            oRouter.navTo("RouteView1");
+          },onPressExit:function () {
             const oRouter = this.getOwnerComponent().getRouter();
             oRouter.navTo("MastView");
           }

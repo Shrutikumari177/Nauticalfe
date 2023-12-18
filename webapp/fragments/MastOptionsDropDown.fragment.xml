@@ -16,13 +16,7 @@
         <MenuItem text="Edit">
         <items>
             <MenuItem text="New Entries"></MenuItem>
-            <MenuItem text="Selections">
-            <items>
-                <MenuItem text="Select All"></MenuItem>
-                <MenuItem text="Deselect All"></MenuItem>
-                <MenuItem text="Select Block"></MenuItem>
-            </items>
-            </MenuItem>
+            
             <MenuItem text="Delete"></MenuItem>
             <MenuItem text="Copy As"></MenuItem>
             <MenuItem text="Change Field Contents"/>

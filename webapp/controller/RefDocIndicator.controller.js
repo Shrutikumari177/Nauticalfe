@@ -4,13 +4,15 @@ sap.ui.define(
         "sap/m/ColumnListItem",
         "sap/m/Text",
         "sap/m/Select",
-        "sap/ui/core/Item"
+        "sap/ui/core/Item",
+        "sap/ui/core/Fragment",
+        "sap/ui/core/routing/History"
     ],
-    function(BaseController,ColumnListItem, Text, Select, Item) {
+    function(BaseController,ColumnListItem, Text, Select, Item,Fragment,History) {
       "use strict";
   
       return BaseController.extend("nauticalfe.controller.RefDocIndicator", {
-        addedRows: [],
+
         onInit() {
         },
         onBackPress: function () {
@@ -34,37 +36,53 @@ sap.ui.define(
                   new Item({ text: "NOMINATION KEY" }),
                   
                   // Add more items as needed
-              ]
-          }));
+               ]
+            }));
 
-          oNewRow.addCell(new Text({ text: "" }));
-          oNewRow.addCell(new Text({ text: "" }));
-          // Add more cells as needed
+                oNewRow.addCell(new Text({ text: "" }));
+                oNewRow.addCell(new Text({ text: "" }));
+                // Add more cells as needed
 
-          // Add the new row to the table
-          oTable.addItem(oNewRow);
-      },
-      onSave: function() {
-        // Perform save operation for added rows
-        this.addedRows.forEach(function(row) {
-            // Example: Access and process each added row
-            // Access data from cells of the row and perform save operation
-            // Save logic here...
+                // Add the new row to the table
+                oTable.addItem(oNewRow);
+          },
+          onPress: function () {
+            var oView = this.getView(),
+              oButton = oView.byId("button");
+            if (!this._oMenuFragment) {
+              this._oMenuFragment = Fragment.load({
+                name: "nauticalfe.fragments.MastOptionsDropDown",
+                            id: oView.getId(),
+                controller: this
+              }).then(function(oMenu) {
+                oMenu.openBy(oButton);
+                this._oMenuFragment = oMenu;
+                return this._oMenuFragment;
+              }.bind(this));
+            } else {
+              this._oMenuFragment.openBy(oButton);
+            }
+          },
+          onExit: function () {
+            const oRouter = this.getOwnerComponent().getRouter();
+            oRouter.navTo("MastView");
+          },onBackPressHome: function () {
+            const oRouter = this.getOwnerComponent().getRouter();
+            oRouter.navTo("RouteView1");
+          },
+          backPress:function(){
+            const oHistory = History.getInstance();
+            const sPreviousHash = oHistory.getPreviousHash();
+ 
+            if (sPreviousHash !== undefined) {
+              window.history.go(-1);
+            } else {
+              const oRouter = this.getOwnerComponent().getRouter();
+              oRouter.navTo("MastView", {}, true);
+            }
+         }
 
-            // For example, accessing the cells of the row:
-            var cells = row.getCells();
-            var selectValue = cells[0].getSelectedItem().getText();
-            var textValue1 = cells[1].getText();
-            var textValue2 = cells[2].getText();
-
-            // Perform the save operation with the retrieved data
-            // Replace this with your save logic using the retrieved values
-            console.log("Save:", selectValue, textValue1, textValue2);
-        });
-
-        // Clear the addedRows array after saving
-            this.addedRows = [];
-    }
+      
 
       });
     }

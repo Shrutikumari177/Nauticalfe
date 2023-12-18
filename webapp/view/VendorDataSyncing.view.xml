@@ -2,15 +2,62 @@
     xmlns:html="http://www.w3.org/1999/xhtml"
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
     xmlns="sap.m">
-
-        <ScrollContainer id="BPDetailsScroll"  >
+       <Page >
+       <headerContent>
+            <!-- Your header content goes here -->
+            <Bar class="customHeader">
+                <contentLeft>
+                    <core:Icon
+                        src="sap-icon://nav-back"
+                        class="size1"
+                        color="#FFFFFF"
+                        press="backPress"
+                    />
+                    <core:Icon
+                        src="sap-icon://home"
+                        class="size1"
+                        color="#FFFFFF"
+                        press="onBackPressHome"
+                    />
+                    <Image
+                        src="../images/ingenxlogo.jpg"
+                        height="75%"
+                    />
+                    <Text
+                        class="textBid"
+                        text="Vendor Data Syncing Details"
+                    />
+                </contentLeft>
+                <contentRight>
+                    <core:Icon
+                        src="sap-icon://search"
+                        class="size1"
+                        color="#FFFFFF"
+                    >
+                        <core:layoutData>
+                            <FlexItemData growFactor="1" />
+                        </core:layoutData>
+                    </core:Icon>
+                    <core:Icon
+                        src="sap-icon://SAP-icons-TNT/user"
+                        class="size1"
+                        color="#FFFFFF"
+                    >
+                        <core:layoutData>
+                            <FlexItemData growFactor="1" />
+                        </core:layoutData>
+                    </core:Icon>
+                </contentRight>
+            </Bar>
+        </headerContent>
+       
             <Bar id="_IDGenBar1" class="_IDGenBar1">
                 <contentLeft>
                     <Button id="_IDGenButton1" text="Save as Variant"></Button>
-                    <Button id="button" icon="sap-icon://slim-arrow-down" iconFirst="false" text="More" ariaHasPopup="Menu"/>
+                    <Button id="button" icon="sap-icon://slim-arrow-down" iconFirst="false" text="More" ariaHasPopup="Menu" press="onPress"/>
                 </contentLeft>
                 <contentRight>
-                    <Button id="_IDGenButton2" text="Exit" press="MastPage"></Button>
+                    <Button id="_IDGenButton2" text="Exit" press="onExit"></Button>
                 </contentRight>
             </Bar>
             <Text id="EnterDetailsId" text="Enter Details" class="EnterDetailsHeader"></Text>
@@ -24,17 +71,16 @@
                 <Button id="searchBtn" icon="../images/search.png"  class="searchIcon"></Button> -->
                 <SearchField id="searchField2" width="60%" search=".onFilterPosts" />
             </HBox>
-            <Bar id="_IDGenBar2" class="exeBtn" >
-            <contentRight>
-                <HBox id="_IDGenHBox2">
-                    <Button id="_IDGenButton3" text="Execute"></Button>
-                </HBox>
-            </contentRight>
-        </Bar>
-        </ScrollContainer>
+            <footer>
+                <OverflowToolbar id="_IDGenOverflowToolbar1" design="Auto">
+                <ToolbarSpacer id="_IDGenToolbarSpacer1" />
+                <Button id="_IDGenButton11" text="Execute" ></Button>
+               
+                </OverflowToolbar>
+            </footer>
         
 
 
 
-    <!-- </Page> -->
+    </Page>
 </mvc:View>

@@ -66,9 +66,7 @@
                 <Button text="Copy As" />
                 <Button text="Delete" />
                 <Button text="Undo Change" />
-                <Button text="Select All" />
-                <Button text="Select Block" />
-                <Button text="Deselect All" />
+               
                 <Button
                     id="button"
                     icon="sap-icon://slim-arrow-down"
@@ -153,9 +151,7 @@
        
             <Table width="100%" class="mastertables" visible="false" id="newTableId" mode="MultiSelect">
                 <columns>
-                    <Column width="30px">
-                        <Label text=" " />
-                    </Column>
+                    
                     <Column>
                         <Label text="Country" />
                     </Column>
@@ -186,7 +182,7 @@
                 </columns>
                 <ColumnListItem>
                     <cells>
-                        <CheckBox />
+                       
                         <Input value="" editable="true" id="Countryedit1"></Input>
                         <Input value="" editable="true" id="Countryedit2"></Input>
                         <Input value="" editable="true" id="Countryedit3"></Input>

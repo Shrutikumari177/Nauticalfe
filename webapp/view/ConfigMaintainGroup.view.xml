@@ -38,9 +38,7 @@
                 <Button id="_IDGenButton3" text="Copy As" />
                 <Button id="_IDGenButton4"  text="Delete" />
                 <Button id="_IDGenButton5" text="Undo Change" />
-                <Button id="_IDGenButton6" text="Select All" />
-                <Button id="_IDGenButton7" text="Select Block" />
-                <Button id="_IDGenButton8" text="Deselect All" />
+                
                 <Button id="button" icon="sap-icon://slim-arrow-down" iconFirst="false" text="More" press="onPress"
                     ariaHasPopup="Menu"/>
             </contentLeft>
@@ -48,7 +46,7 @@
             <contentRight>
                 <core:Icon id="_IDGenIcon3" src="sap-icon://print" class="size1" color="#FF0000" />
                 <Button id="_IDGenButton9" text="Display" />
-                <Button id="_IDGenButton10" text="Exit" press="MastPage" />
+                <Button id="_IDGenButton10" text="Exit" press="onPressExit" />
             </contentRight>
         </Bar>
         <Text id="_IDGenText01" text="User ID and Group Mapping " class="masterheadings"/>

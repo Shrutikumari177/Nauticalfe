@@ -91,9 +91,9 @@
     background-color: rgba(234, 144, 130, 0.299);
 }
 
-.sapMColumnHeader .sapMText {
+/* .sapMColumnHeader .sapMText {
     font-size: 12px;
-}
+} */
 /*---------------------------------------------------------------------------------------------------------*/
 
 /*For view 3 headers*/
@@ -193,6 +193,7 @@
     flex-direction: row;
     gap: 5rem;
     flex-wrap: wrap;
+    margin-top: -2;
 }
 
 .text1{
@@ -238,12 +239,15 @@
     flex-direction: row;
     flex-wrap: wrap;
     gap: 5 rem;
+    
 }
 .panel{
     padding: 40px;
+    background-color: whitesmoke;
 }
-.panel1{
-  margin-top: 8%;
+.mastrimg{
+  position: fixed;
+  margin-top: 7%;
 }
 .Trans{
     padding: 10%; margin: 10% 15%;
@@ -252,20 +256,13 @@
     padding: 10%; margin: 10% 15%;
 }
 
-.nauticalImg{
-    max-width: 280px !important;
-    height: 270px !important;
-    margin-top: 10%;
-}
+
 
 .dashPanel2{
     padding: 1rem;  
 }
 .sapUiSizeCompact .sapMBtnInner {
     border-radius: 4px;
-}
-.mastrimg{
-    margin-top: 10% !important;
 }
 
 /*transaction data css*/
@@ -276,10 +273,7 @@
 .one,.two,.three,.four,.five{
     margin: 2%; margin-top: 7%;
 }
-/*for nautical image*/
-/* .sapMFlexItemAlignAuto {
-    align-self: center;
-} */
+
 
 
 /* for voyage option page */
@@ -300,7 +294,7 @@
 }
 .sapUiSizeCompact .sapMBtnContent {
     line-height: 1.500rem;
-    color: red;
+    color: rgb(194,65,65);
 }
 
 
@@ -320,12 +314,6 @@ font-size: small;
     margin-left: 25% !important;
 }
 
-/* FOR LONG TEXT */
-
-/* .sapMInputBase.sapMTextArea .sapMTextAreaInner {
-    line-height: 10;
-    background-color: white;
-} */
 
 
 
@@ -429,3 +417,8 @@ font-size: small;
 .textBid{
     color: white;
 }
+/* for arrow icon */
+.sapUiSizeCompact .sapMBtnIcon {
+    
+    color: rgb(194,65,65);
+  }
