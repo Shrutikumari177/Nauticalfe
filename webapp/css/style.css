@@ -422,3 +422,6 @@ font-size: small;
     
     color: rgb(194,65,65);
   }
+  .footeractualplanbutton{
+    justify-content: space-between !important;
+  }

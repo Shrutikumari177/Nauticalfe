@@ -14,42 +14,46 @@
     >
         <headerContent>
             <!-- Your header content goes here -->
-            <Bar id="_IDGenBar2" class="customHeader">
+            <Bar class="customHeader">
                 <contentLeft>
-                    <Button id="_IDGenButton11"
-                        class="customHeaderButton"
-                        icon="sap-icon://nav-back"
-                        press="onBackPress"
+                    <core:Icon
+                        src="sap-icon://nav-back"
+                        class="size1"
+                        color="#FFFFFF"
+                        press="backPress"
                     />
-                    <Image id="_IDGenImage1"
-                        src="../images/Ingenx.png"
-                        height="2rem"
-                        width="6rem"
-                        
+                    <core:Icon
+                        src="sap-icon://home"
+                        class="size1"
+                        color="#FFFFFF"
+                        press="onBackPressHome"
                     />
-                    <Text id="_IDGenText3"
+                    <Image
+                        src="../images/ingenxlogo.jpg"
+                        height="75%"
+                    />
+                    <Text
                         class="textBid"
                         text="Change View :Master Details for Currency: Overview"
                     />
                 </contentLeft>
                 <contentRight>
-                    <SearchField id="searchField" width="75%" search="onSearch" />
-                    <core:Icon id="_IDGenIcon1"
+                    <core:Icon
                         src="sap-icon://search"
                         class="size1"
                         color="#FFFFFF"
                     >
                         <core:layoutData>
-                            <FlexItemData id="_IDGenFlexItemData1" growFactor="1" />
+                            <FlexItemData growFactor="1" />
                         </core:layoutData>
                     </core:Icon>
-                    <core:Icon id="_IDGenIcon2"
-                        src="sap-icon://person-placeholder"
+                    <core:Icon
+                        src="sap-icon://SAP-icons-TNT/user"
                         class="size1"
                         color="#FFFFFF"
                     >
                         <core:layoutData>
-                            <FlexItemData id="_IDGenFlexItemData2" growFactor="1" />
+                            <FlexItemData growFactor="1" />
                         </core:layoutData>
                     </core:Icon>
                 </contentRight>
@@ -177,9 +181,7 @@
                         <Button id="_IDGenButton13" text="Copy As" />
                         <Button id="_IDGenButton14" text="Delete" press="onDeleteVoyageType" />
                         <Button id="_IDGenButton15" text="Update" press="onShowUpdateDialog" />
-                        <Button id="_IDGenButton16" text="Select All" />
-                        <Button id="_IDGenButton17" text="Select Block" />
-                        <Button id="_IDGenButton18" text="Deselect All" />
+                        
                         <Button
                             id="button"
                             icon="sap-icon://slim-arrow-down"
@@ -198,7 +200,7 @@
                         <Button id="_IDGenButton19" text="Display" />
                         <Button id="_IDGenButton20"
                             text="Exit"
-                            press="MastPage"
+                            press="onExit"
                         />
                     </contentRight>
                 </Bar>

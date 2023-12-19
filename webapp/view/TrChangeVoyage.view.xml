@@ -241,11 +241,31 @@
                                 <ColumnListItem id="ColumnListItem6" >
                                     <cells>
                                         <RadioButton id="_IDGenRadioButton2" ></RadioButton>
+                                        <Select id="_IDGenSlect5" width="200px">
+                                            <items>
+                                                <core:Item id="_IDGtem8"  text=""></core:Item>
+                                                <core:Item id="_IDGtem9"  text="G - SALES CONTRACT"></core:Item>
+                                                <core:Item id="_IDGtem10"  text="K - PURCHASE CONTRACT"></core:Item>
+                                                <core:Item id="_IDGtem11"  text="P - PURCHASE ORDER"></core:Item>
+                                                <core:Item id="_IDGtem12"  text="S - SALES ORDER"></core:Item>
+                                                <core:Item id="_IDGtem13"  text="Z - NOMINATION KEY"></core:Item>
+                                            </items>
+                                        </Select>
                                     </cells>
                                 </ColumnListItem>
                                 <ColumnListItem id="ColumnListItem7" >
                                     <cells>
                                         <RadioButton id="_IDGenRadioButton3" ></RadioButton>
+                                        <Select id="_IDGeelect5" width="200px">
+                                            <items>
+                                                <core:Item id="_IDGenIt8"  text=""></core:Item>
+                                                <core:Item id="_IDGenIm9"  text="G - SALES CONTRACT"></core:Item>
+                                                <core:Item id="_IDGenIt10"  text="K - PURCHASE CONTRACT"></core:Item>
+                                                <core:Item id="_IDGetem11"  text="P - PURCHASE ORDER"></core:Item>
+                                                <core:Item id="_IDGItem12"  text="S - SALES ORDER"></core:Item>
+                                                <core:Item id="_IDGenem13"  text="Z - NOMINATION KEY"></core:Item>
+                                            </items>
+                                        </Select>
                                     </cells>
                                 </ColumnListItem>
                                 <ColumnListItem id="ColumnListItem8" >
@@ -261,7 +281,7 @@
                             
                             </items>
                             </Table>
-                            <Button id="DocButton" icon="sap-icon://sys-minus" class="buttonSpacing"></Button>
+                            <!-- <Button id="DocButton" icon="sap-icon://sys-minus" class="buttonSpacing"></Button> -->
             </Panel>
             <!-- end of vessel detail section -->
 
@@ -687,8 +707,112 @@
 
             <!-- Panel for ButtonB -->
             <Panel id="panelB" height="600px" class="navigationPanel">
-                <Text id="_IDGenText22" text="this is page B"></Text>
-                <!-- ... -->
+                <HBox class="footeractualplanbutton" width= "100%">
+                            <Button icon="sap-icon://zoom-in"  class="footeractualplanbutton"/>
+                            <Button icon="sap-icon://sort-ascending"  class="footeractualplanbutton"/>
+                            <Button icon="sap-icon://sort-descending"  class="footeractualplanbutton"/>
+                            <Button icon="sap-icon://search"  class="footeractualplanbutton"/>
+                            <Button icon="sap-icon://zoom-in"  class="footeractualplanbutton"/>
+                            <Button icon="sap-icon://filter" class="footeractualplanbutton"/>
+                            <Button icon="sap-icon://slim-arrow-down" class="footeractualplanbuttonfilter"/>
+                            <Button icon="sap-icon://sum"  class="footeractualplanbutton"/>
+                            <Button icon="../images/subtotals.png"  class="footeractualplanbutton"/>
+                            <Button icon="sap-icon://print"  class="footeractualplanbutton"/>
+                            <Button icon="sap-icon://detail-view"  class="footeractualplanbutton"/>
+                            <Button icon="sap-icon://slim-arrow-down" class="footeractualplanbuttonfilter"/>
+                            <Button icon="../images/Export.png"  class="footeractualplanbutton"/>
+                            <Button icon="sap-icon://slim-arrow-down" class="footeractualplanbuttonfilter"/>
+                            <Button icon="sap-icon://table-chart"  class="footeractualplanbutton"/>
+                            <Button icon="sap-icon://message-information" class="footeractualplanbutton"/>
+                            <Button icon="sap-icon://full-screen" class="footeractualplanbutton"/>
+                        </HBox>
+                        <Table width="100%" class="costplantables">
+                            <columns>
+                                <Column>
+                                    <Label text="LegId"/>
+                                </Column>
+                                <Column>
+                                    <Label text="Event No."/>
+                                </Column>
+                                <Column>
+                                    <Label text="Event Type"/>
+                                </Column>
+                                <Column width="200px">
+                                    <Label text="Normal Text"/>
+                                </Column>
+                                <Column>
+                                    <Label text="Status"/>
+                                </Column>
+                                <Column width="120px">
+                                    <Label text="Planned Start Date"/>
+                                </Column>
+                                <Column width="120px">
+                                    <Label text="Planned Start Time"/>
+                                </Column>
+                                <Column width="120px">
+                                    <Label text="Planned End Date"/>
+                                </Column>
+                                <Column width="120px">
+                                    <Label text="Planned End Time"/>
+                                </Column>
+                                <Column>
+                                    <Label text="Event Status Text"/>
+                                </Column>
+                            </columns>
+                        </Table>
+                         <HBox class="footeractualplanbutton">
+                            <Button icon="sap-icon://zoom-in"  class="footeractualplanbutton"/>
+                            <Button icon="sap-icon://sort-ascending"  class="footeractualplanbutton"/>
+                            <Button icon="sap-icon://sort-descending"  class="footeractualplanbutton"/>
+                            <Button icon="sap-icon://search"  class="footeractualplanbutton"/>
+                            <Button icon="sap-icon://zoom-in"  class="footeractualplanbutton"/>
+                            <Button icon="sap-icon://filter" class="footeractualplanbutton"/>
+                            <Button icon="sap-icon://slim-arrow-down" class="footeractualplanbuttonfilter"/>
+                            <Button icon="sap-icon://sum"  class="footeractualplanbutton"/>
+                            <Button icon="../images/subtotals.png"  class="footeractualplanbutton"/>
+                            <Button icon="sap-icon://print"  class="footeractualplanbutton"/>
+                            <Button icon="sap-icon://detail-view"  class="footeractualplanbutton"/>
+                            <Button icon="sap-icon://slim-arrow-down" class="footeractualplanbuttonfilter"/>
+                            <Button icon="../images/Export.png"  class="footeractualplanbutton"/>
+                            <Button icon="sap-icon://slim-arrow-down" class="footeractualplanbuttonfilter"/>
+                            <Button icon="sap-icon://table-chart"  class="footeractualplanbutton"/>
+                            <Button icon="sap-icon://message-information" class="footeractualplanbutton"/>
+                            <Button icon="sap-icon://full-screen" class="footeractualplanbutton"/>
+                        </HBox>
+                        <Table width="100%" class="costplantables">
+                            <columns>
+                                <Column>
+                                    <Label text="LegId"/>
+                                </Column>
+                                <Column>
+                                    <Label text="Event No."/>
+                                </Column>
+                                <Column>
+                                    <Label text="Event Type"/>
+                                </Column>
+                                <Column width="200px">
+                                    <Label text="Normal Text"/>
+                                </Column>
+                                <Column>
+                                    <Label text="Status"/>
+                                </Column>
+                                <Column width="120px">
+                                    <Label text="Planned Start Date"/>
+                                </Column>
+                                <Column width="120px">
+                                    <Label text="Planned Start Time"/>
+                                </Column>
+                                <Column width="120px">
+                                    <Label text="Planned End Date"/>
+                                </Column>
+                                <Column width="120px">
+                                    <Label text="Planned End Time"/>
+                                </Column>
+                                <Column>
+                                    <Label text="Event Status Text"/>
+                                </Column>
+                            </columns>
+                        </Table>
             </Panel>
 
         </NavContainer>
